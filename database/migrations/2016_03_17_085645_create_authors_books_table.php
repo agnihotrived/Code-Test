@@ -42,7 +42,7 @@ class CreateAuthorsBooksTable extends Migration
          * This table act as a mapping table between book and author with many-to-many relationship.
          * Many book can be written by many authors, and many author can have multiple books.  
          */
-        Schema::create('Book_Associations', function (Blueprint $table) {
+        Schema::create('book_associations', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('bookid');
             $table->integer('authorid');            
