@@ -153,7 +153,10 @@ app.controller('BookController', function BookController($scope, crudService) {
     //Function to set associated and disassociated book for a specific author 
     function ProcessBookAssociatedData(authorid) {
         var tempAuthorBook = jQuery.grep($scope.AssociationData, function (obj, index) {
-            return obj.authorid === authorid;
+            var val1 = parseInt(obj.authorid,10);
+            var val2 = parseInt(authorid,10);
+            return (val1 === val2);
+            //return obj.authorid === authorid;
         });
         var associatedBooks = [];
         var disassociatedData = [];
@@ -163,7 +166,10 @@ app.controller('BookController', function BookController($scope, crudService) {
         } else {
             for (var j = 0; j < $scope.Books.length; j++) {
                 for (var i = 0; i < tempAuthorBook.length; i++) {
-                    if ($scope.Books[j]['id'] === tempAuthorBook[i]['bookid'])
+                    var val1 = parseInt($scope.Books[j]['id'],10);
+                    var val2 = parseInt(tempAuthorBook[i]['bookid'],10);
+                    if(val1 === val2)
+                    //if ($scope.Books[j]['id'] === tempAuthorBook[i]['bookid'])
                     {
                         associatedBooks.push($scope.Books[j]);
                     }
