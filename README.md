@@ -32,11 +32,11 @@ Windows :
 
                 Option 1: Git Clone
 
-                        $ git clone https://github.com/agnihotrived/Laravel.git
+                        $ git clone https://github.com/agnihotrived/Code-Test.git
 
                 Option 2: Download the repository
 
-                        https://github.com/agnihotrived/Laravel/archive/master.zip
+                        https://github.com/agnihotrived/Code-Test/archive/master.zip
 
         Step 2: Use Composer to install dependencies
 
